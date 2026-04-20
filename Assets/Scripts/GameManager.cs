@@ -214,6 +214,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void CancelTimeTravel()
+    {
+        if (last != null)
+        {
+            pivot = last;
+            ApplyTurnState();
+            UpdateUI();
+        }
+    }
+
     public void PlayerDie()
     {
         isReplaying = true;
